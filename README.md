@@ -28,15 +28,19 @@ The high level objective is to provide a "Variable report" viewer that shows the
 such as the minimum and maximum observed values.
    * The outer container is a [FHIR Bundle](https://www.hl7.org/fhir/bundle.html#resource)
    * This Bundle's "entry" is an array of [FHIR Observations](https://www.hl7.org/fhir/observation.html#resource)
-   * The Observation has a "value", which describes the variable.
-   * The Observation has an array of "component", which describe the features of that variable.
+   * The Observation has a "valueCodeableConcet" which names the variable being described.
+   * The Observation has an array of "component" which describe the features of that variable, for example the count of individuals with the race indicated.
+   * Note that the above FHIR documentation is complex and covers substantially more depth than is necessary here, but is provided for reference.
 1. Create a simple application that allows for searching and display of these variables and their attributes.
     * May be a web application or local application
-    * Must provide a way to view the repository's GitHub page
 1. Create a `RESPONSE_README.md` file with the following:
     1. Explanation of coding standards used
     1. Explanation of how to run the program
     1. Description of basic workflow of program
+    1. Answers to the following questions derived from the data:
+        1. How many Observations are present here?
+        2. How many individuals have "Phenotype Present" for "Abnormal leukocyte morphology"?
+        3. List the five variables with the highest number of total observations.
 
 ## Instructions
 Please  provide us with a link to a github (or similar) repo that contains your code and documentation.
